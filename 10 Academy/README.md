@@ -6,6 +6,16 @@ A front-end recreation of the [10 Academy](https://www.10academy.org/) website, 
 
 ---
 
+## 👥 Group 4 Members
+1. Gemachis Tesfaye
+2. Bonsa Horsa
+3. Hawi Desalegn
+4. Sisay Tasew
+5. Daniel Alemayehu
+6. Tashooma Mangistu
+
+---
+
 ## 🚀 Project Overview
 This project is a pixel-perfect clone of the 10 Academy landing page. The goal was to build a modern, high-performance website using strictly vanilla tools—no frameworks, no external CSS libraries, just clean code.
 
@@ -45,6 +55,7 @@ Based on the current repository organization:
 - Telegram: [https://t.me/GemachisTesfaye](https://t.me/GemachisTesfaye)
 
 Feel free to reach out for collaborations or feedback!
+
 
 
 
