@@ -1,0 +1,335 @@
+/* =========================
+   RESET + BASE
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #282e3e;
+  background-color: #ffffff;
+}
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+}
+
+/* =========================
+   LEFT SIDE (IMAGE)
+========================= */
+.login-left {
+  flex: 1;
+  position: relative;
+  padding: 64px;
+  height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('https://assets.quizlet.com/_next/static/media/QZ_Auth_LightV2.d6b0ba3d.png') no-repeat center center;
+  background-size: cover; /* image fills entire area */
+}
+
+/* Optional: subtle overlay for text readability */
+.login-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3); /* dark overlay, adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Headline ABOVE image */
+.login-headline {
+  position: relative;
+  z-index: 2; /* above overlay */
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  max-width: 420px;
+  margin: 0;
+  color: rgb(43, 42, 42);
+}
+
+/* Brand stays visible above image */
+.login-brand {
+  position: relative;
+  z-index: 2; /* above overlay */
+  font-size: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* =========================
+   RIGHT SIDE (FORM)
+========================= */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* =========================
+   TABS
+========================= */
+.auth-tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #6d717c;
+  padding-bottom: 6px;
+}
+
+.tab.active {
+  color: #282e3e;
+  border-bottom: 3px solid #c77dff;
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+.social-logins {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f6f7fb;
+  font-size: 14px;
+  font-weight: 600;
+  color: #282e3e;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background-color: #eef0f7;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.divider {
+  text-align: center;
+  font-size: 13px;
+  color: #6d717c;
+  margin: 24px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #e3e5ea;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* =========================
+   FORM
+========================= */
+.auth-form label {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #d9dbe1;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #4255ff;
+}
+
+/* =========================
+   FORM ROW
+========================= */
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.forgot {
+  font-size: 13px;
+  color: #4255ff;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+.login-btn {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background-color: #4255ff;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #2f43ff;
+}
+
+/* =========================
+   TERMS
+========================= */
+.terms {
+  margin-top: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: #6d717c;
+}
+
+.terms a {
+  color: #4255ff;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   CREATE ACCOUNT
+========================= */
+.create-account {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 999px;
+  background-color: #f6f7fb;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.create-account a {
+  color: #4255ff;
+  text-decoration: none;
+}
+
+/* =========================
+   MAGIC LINK
+========================= */
+.magic-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.magic-link a {
+  font-size: 14px;
+  color: #4255ff;
+  text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    padding: 40px 16px;
+  }
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f6f7fb;
+  font-size: 14px;
+  font-weight: 600;
+  color: #282e3e;
+  cursor: pointer;
+
+  display: flex;           /* align icon and text */
+  align-items: center;     /* vertically center */
+  gap: 10px;               /* space between icon and text */
+}
+
+.social-btn:hover {
+  background-color: #eef0f7;
+}
+
+.social-icon {
+  width: 20px;             /* adjust size */
+  height: 20px;
+  object-fit: contain;
+}
