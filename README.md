@@ -46,11 +46,11 @@ Each group maintains its project inside its respective directory, including sour
 | Group 1 | Coming Soon |
 | Group 2 | Coming Soon |
 | Group 3 | Coming Soon |
-| **Group 4** | **10 Academy** |
-| **Group 5** | **Frontend Project** |
+| **Group 4** | **10 Academy Clone** |
+| **Group 5** | **Quizlet Clone** |
 | Group 6 | Coming Soon |
 | Group 7 | Coming Soon |
-| **Group 8** | **Internet Programming Project** |
+| **Group 8** | **Khan Academy Clone** |
 
 ---
 
